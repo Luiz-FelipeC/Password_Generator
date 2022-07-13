@@ -33,8 +33,10 @@ body{
     align-items: center;
     justify-content: center;
     width: 570px;
-    height: 160px;
+    height: 260px;
+    padding: 15px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .container span {
@@ -46,10 +48,23 @@ body{
     -webkit-appearance: none;
     width: 100%;
     border-radius: 20px;
-    background: lightgray;
+    background:#40B92D;
     height: 18px;
     outline: none;
     margin-top: 8px;
+    box-shadow: 0 2px 25px rgba(46, 231, 0, 0.5);
+}
+
+.slider::-webkit-slider-thumb{
+    background: #fff;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb{
+    background: #fff;
 }
 
 .bg-video {
@@ -77,6 +92,69 @@ body{
     border: none;
     cursor: pointer;
     position: relative;
-    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    transition: transform 0.5s;
     box-shadow: 0 2px 25px rgba(46, 231, 0, 0.5);
 }
+
+.button-cta:hover{
+    transform: scale(1.05);
+}
+.password-container{
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.password-title{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 8px;    
+}
+
+
+.password{
+    height: 30px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid rgba(46, 231, 0, 0.5);
+    transition: transform 0.5s;
+}
+
+.password:hover{
+    transform: scale(1.05);
+}
+
+.copy{
+    color: #fff;
+    position: relative;
+    padding: 6px 8px;
+    top: 5px;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid rgba(46, 231, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hide{ 
+    display: none;
+}
+
+.password-container:hover .copy{
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+
+
